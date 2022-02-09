@@ -1,0 +1,12 @@
+#Jonas' answer
+#in manes.html
+
+{% extends "layout.html" %}
+{% block body %}
+{% for user in ["ben", "harry", "bob", "jay", "matt", "bill"] if user.startswith('b') %}
+ <p>{{user.upper()}}</p>
+{% endfor %}
+<p>The above names start with the letter B</p>
+{% endblock body %}
+
+#Luke's answer

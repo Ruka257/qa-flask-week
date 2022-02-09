@@ -1,6 +1,7 @@
 from application import app, db
 from application.models import Games
 
+#add route not found? homepage works fine
 @app.route('/add')
 def add():
     new_game = Games(name="New Game")

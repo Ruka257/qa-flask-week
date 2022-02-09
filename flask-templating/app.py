@@ -20,5 +20,8 @@ def harry():
    # bnames = names.query.all('b')
    # return render_template('bnames.html')
 
+@app.route('/names')
+def names():
+
 if __name__ == "__main__":
      app.run(debug=True, host='0.0.0.0')
