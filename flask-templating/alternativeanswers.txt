@@ -1,12 +1,20 @@
 #Jonas' answer
-#in manes.html
+#in users.html
 
 {% extends "layout.html" %}
 {% block body %}
-{% for user in ["ben", "harry", "bob", "jay", "matt", "bill"] if user.startswith('b') %}
- <p>{{user.upper()}}</p>
-{% endfor %}
+    {% for user in ["ben", "harry", "bob", "jay", "matt", "bill"] if user.startswith('b') %}
+        <p>{{user.upper()}}</p>
+    {% endfor %}
 <p>The above names start with the letter B</p>
 {% endblock body %}
 
 #Luke's answer
+{% extends "layout.html" %}
+{% block body %}
+     {% for user in users %}
+        {% if 'b' in user %}
+            <p>User is {{user}}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock body %}

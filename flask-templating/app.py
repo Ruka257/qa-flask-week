@@ -20,8 +20,9 @@ def harry():
    # bnames = names.query.all('b')
    # return render_template('bnames.html')
 
-@app.route('/names')
-def names():
+@app.route('/users')
+def users():
+     return render_template('users.html', users=["ben", "harry", "bob", "jay", "matt", "bill"])
 
 if __name__ == "__main__":
      app.run(debug=True, host='0.0.0.0')
