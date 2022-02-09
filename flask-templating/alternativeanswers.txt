@@ -1,5 +1,6 @@
 #Jonas' answer
 #in users.html
+could try creating a return statement if b is false...
 
 {% extends "layout.html" %}
 {% block body %}
