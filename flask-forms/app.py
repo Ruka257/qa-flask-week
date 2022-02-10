@@ -16,7 +16,8 @@ class BasicForm(FlaskForm):
 def register():
     message = ""
     form = BasicForm()
-
+#When the user enters their details and presses Submit, the if request.method == 'POST':
+#statement will return True and write a message.
     if request.method == 'POST':
         first_name = form.first_name.data
         last_name = form.last_name.data

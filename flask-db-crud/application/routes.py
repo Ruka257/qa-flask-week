@@ -1,7 +1,6 @@
 from application import app, db
 from application.models import Games
 
-#add route not found? homepage works fine
 @app.route('/add')
 def add():
     new_game = Games(name="New Game")
@@ -25,7 +24,7 @@ def update(name):
     return first_game.name
 
 @app.route('delete')
-def delete(name):
+def delete():
     first_game = Games.query.get(1)
     db.session.delete(first_game)
     db.session.commit()
